@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "Arivaa-Firebase",
+    "description": "Perfect mix of Firebase,Expo and antd design for kickstarting your business project.",
+    "slug": "arivaa-firebase",
+    "privacy": "public",
+    "sdkVersion": "23.0.0",
+    "version": "1.2.0",
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.laxaar.arivaa.basicfirebase",
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "com.googleusercontent.apps.69935791112-cqnuom5dm2q870o7f5coacsivvpiuskr"
+        }
+      }
+    },
+    "android": {
+      "package": "com.laxaar.arivaa.basicfirebase",
+      "config": {
+        "googleSignIn": {
+          "apiKey": "AIzaSyCjFFEXG1-sA_Wn6yk6voDAT2K36CyHJ8s",
+          "certificateHash": "236660CF91C6BEEF9194DB9826F2E522BDA5C9AE"
+        }
+      }
+    },
+    "facebookScheme": "fb513432372363654",
+    "facebookAppId": "513432372363654",
+    "facebookDisplayName": "Arivaa Firebase"
+  }
+}
