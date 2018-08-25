@@ -8,17 +8,9 @@ import firebase from 'firebase';
 import {getRecaptchaApplicationVerifier} from '../../utils/firebase';
 import {isValidNumber} from 'libphonenumber-js';
 import {INITIAL_SECURED_ROUTE} from '../../routing';
-/**
- * @description Login Container
- * @type Container
- * @author Inderdeep
- */
+
 class Main extends Component {
 
-    /**
-     * Container
-     * @param props
-     */
     constructor(props) {
         super(props);
         this.state = {
@@ -34,11 +26,6 @@ class Main extends Component {
         this.handleSocialSignInError = handleSocialSignInError.bind(this);
     }
 
-
-    /**
-     * Parse recaptcha string from webview
-     * @param recaptcha
-     */
     parseRecaptcha(recaptcha) {
         this.setState({
             recaptcha,
@@ -46,9 +33,6 @@ class Main extends Component {
         }, this.sendSms.bind(this))
     }
 
-    /**
-     * Set Validations
-     */
     setValidations() {
         const {translate} = this.props;
         this.validations = {
@@ -83,20 +67,12 @@ class Main extends Component {
         }
 
     }
-
-    /**
-     * Enable Phone Sign In
-     */
     togglePhoneSignIn() {
         this.setState({
             phoneSignIn: !this.state.phoneSignIn
         })
     }
 
-    /**
-     * Send SMS for verification
-     * @param phone
-     */
     sendSms() {
         const {translate} = this.props;
         const {recaptcha,phone} = this.state;
@@ -119,10 +95,6 @@ class Main extends Component {
         });
     }
 
-    /**
-     * Verify Otp
-     * @param otp
-     */
     verifyOtp(otp) {
 
         this.login("phone", {
@@ -131,18 +103,10 @@ class Main extends Component {
         });
     }
 
-    /**
-     * ComponentDidMount Hook
-     */
     componentDidMount() {
 
     }
 
-    /**
-     * On Submit of form
-     * @param errors
-     * @param values
-     */
     onSubmit(values) {
         const {translate} = this.props;
         if (this.state.phoneSignIn) {
@@ -159,38 +123,20 @@ class Main extends Component {
             this.login('local', values);
         }
     }
-
-
-    /**
-     * Render Method
-     * @returns {*}
-     */
     render() {
         return (ComponentView.bind(this))();
     }
 }
 
-/**
- * Bind Redux Actions
- * @param dispatch
- * @returns {{Object}}
- */
+
 const bindAction = (dispatch) => {
     return {
-        /**
-         * Login Action Creator
-         * @param drawerId
-         */
         login: (data) => {
             return dispatch(createAction(ActionNames.LOGIN, data))
         }
     }
 };
-/**
- * Bind State to props
- * @param dispatch
- * @returns {{Object}}
- */
+
 const mapStateToProps = (state) => {
     const {auth} = state;
     return {
@@ -202,15 +148,7 @@ export default preProcess(Main, {
     connect: [mapStateToProps, bindAction],
     localize: true
 });
-/**
- * Export common login methods to be
- * used in signup
- */
-/**
- * Login
- * @param provider - provider type
- * @param credentials - credentials
- */
+
 export function login(provider, credentials) {
     const {navigation, login, translate} = this.props;
     let promise = null;
@@ -270,41 +208,25 @@ export function login(provider, credentials) {
         })
     }
 }
-/**
- * Handle Social Signin
- * @param provider - provider e.g facebook or google
- * @param result - Response
- */
+
 export function handleSocialSignIn(provider, result) {
     this.login(provider, result);
 }
 
-/**
- * Handle Error for social signin
- * @param provider - provider e.g facebook or google
- * @param error
- */
+
 export function handleSocialSignInError(provider, error) {
     const {translate} = this.props;
     //alert(JSON.stringify(error))
     Toast.fail(translate("login.fail") + provider, 0.5);
 }
 
-
-/**
- * Sign In with twitter
- *  @param response
- */
 export function signInWithTwitter(response){
     this.setState({
         twitterSignIn:false
     });
     this.login("twitter",JSON.parse(response));
 }
-/**
- * Sign In with Github
- *  @param response
- */
+
 export function signInWithGithub(response){
     this.setState({
         githubSignIn:false
