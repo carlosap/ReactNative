@@ -14,10 +14,7 @@ import phoneIcon from '../../../assets/phone.png';
 import {Environment} from '../../config';
 import {getInputStyle} from '../../utils/antd';
 import CustomWebView from '../../components/CustomWebView'
-/**
- * Returns the JSX Markup for the view
- * @returns {XML}
- */
+
 var view = function () {
     const {email, password, phone, countryCode} = this.validations;
     const {translate} = this.props;
