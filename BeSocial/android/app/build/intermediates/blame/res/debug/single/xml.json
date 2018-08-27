@@ -2,5 +2,9 @@
     {
         "merged": "C:\\code\\src\\github.com\\ReactNative\\BeSocial\\BeSocial\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
         "source": "C:\\code\\src\\github.com\\ReactNative\\BeSocial\\BeSocial\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.55.4\\res\\xml\\preferences.xml"
+    },
+    {
+        "merged": "C:\\code\\src\\github.com\\ReactNative\\BeSocial\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
+        "source": "C:\\code\\src\\github.com\\ReactNative\\BeSocial\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.55.4\\res\\xml\\preferences.xml"
     }
 ]

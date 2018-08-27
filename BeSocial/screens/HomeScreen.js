@@ -4,7 +4,10 @@ import { View,StyleSheet,Button, Text } from 'react-native'
 import { enableOnboarded } from '../actions/main';
 
 class HomeScreen extends Component {
-
+  
+  static navigationOptions = {
+    header: null
+  }
 
   render() {
     return (

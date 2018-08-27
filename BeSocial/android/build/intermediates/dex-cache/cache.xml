@@ -3,48 +3,30 @@
 
     <item
         is-multidex="false"
-        jar="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.55.4\jars\libs\infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_f893f403123556abf443dbd32280586825d43fce.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jar="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1_0ada9dc81da2203fb58215b3285710427a274a94.jar" />
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1_ff82f6fe9b125fec4a17f749ae9d4ef339ba5b6a.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.55.4\jars\classes.jar"
+        jar="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="e31331bdf6b5952badadbfc171f04b95c55d3b16">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.react-react-native-0.55.4_03c8bdc3cff0dda797745459730fd7c01e2e96e3.jar" />
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-okhttp3-1.3.0_4ccb099648f65619a607a5823fc9e564c68fa86b.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\carlos.perez\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.6.0\3f9b16b774f2c36cfd86dd2053d0b3059531dacc\okhttp-urlconnection-3.6.0.jar"
+        jar="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.55.4\jars\libs\infer-annotations-4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-3.6.0_fb2507d2076092af621c69167b5badccdd28b63b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.3.0_7ac7998a95ef3706ebb86511347d5a3083eb39ee.jar" />
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_f724d84103e7cc3f14ba2a8cda17926700aba148.jar" />
     </item>
     <item
         is-multidex="false"
@@ -53,16 +35,16 @@
         optimize="true"
         revision="23.0.1"
         sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\okhttp-3.6.0_95c6e9a0c8c61dd0b63e0d375ef302dd845f4385.jar" />
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\okhttp-3.6.0_95c6e9a0c8c61dd0b63e0d375ef302dd845f4385.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.3.0\jars\classes.jar"
+        jar="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-1.3.0_b66c129173e876eaaeda4a810941c31c20f798e8.jar" />
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fresco-1.3.0_480dc067d2897edcb3a275199b75748585030709.jar" />
     </item>
     <item
         is-multidex="false"
@@ -71,7 +53,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0_c773e5ca7cc8a49696588b72a930573f33028746.jar" />
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0_c773e5ca7cc8a49696588b72a930573f33028746.jar" />
     </item>
     <item
         is-multidex="false"
@@ -80,7 +62,16 @@
         optimize="true"
         revision="23.0.1"
         sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1_50087f0be3547aa82aa9b8c814355bd9752d049b.jar" />
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1_50087f0be3547aa82aa9b8c814355bd9752d049b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.55.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e31331bdf6b5952badadbfc171f04b95c55d3b16">
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.react-react-native-0.55.4_481ab55e509e489fe422e8552f3bd52c3636ae71.jar" />
     </item>
     <item
         is-multidex="false"
@@ -89,16 +80,34 @@
         optimize="true"
         revision="23.0.1"
         sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\staticlayout-proxy-1.0_f0cc5912e67cc28dbabd5375095d747467e0b28c.jar" />
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\staticlayout-proxy-1.0_f0cc5912e67cc28dbabd5375095d747467e0b28c.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\jars\classes.jar"
+        jar="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.soloader-soloader-0.1.0_22c0ae43aec52966a133a8f23c468200f59d7b18.jar" />
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_b8978f9dcd5a66ef7e4afdd56d2e9d23af701f9b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_3e57c73708704431f1ac278baa87bdf7c24fd6fd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.0.1_3dbb53eeba297da051e9a617007c7992599c7f6a.jar" />
     </item>
     <item
         is-multidex="false"
@@ -107,7 +116,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_e6e70349d06cdeefbb0b65621bfb06c66cd48166.jar" />
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_e6e70349d06cdeefbb0b65621bfb06c66cd48166.jar" />
     </item>
     <item
         is-multidex="false"
@@ -116,70 +125,16 @@
         optimize="true"
         revision="23.0.1"
         sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\okio-1.13.0_d25622e444665fe3649f51daf7ce785c93000e34.jar" />
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\okio-1.13.0_d25622e444665fe3649f51daf7ce785c93000e34.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
+        jar="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_f726b9de4a8ee82b3ba620525bbd770075a61d3e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.0.1_c907aead7cecc9a7588f1791dea70a0c968ed853.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-okhttp3-1.3.0_83331217be0caa599488db5feef25c6d9674e86c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.0.1_d99777ff77782cca645845eeacb594f81a1b34d6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.3.0_ca974caf57c0541c2ab2881d849fffb98678cf39.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_6080c597ec1f56f8c4002dee5adc53a8c2ecd490.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fresco-1.3.0_c07335180e3295b77a884a9d5fd10394ec11ee6d.jar" />
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.3.0_77f9618974408c8f5c7d4c9dae2c7e072c8cbb7e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -188,7 +143,52 @@
         optimize="true"
         revision="23.0.1"
         sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\BeSocial\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_268d778a1fca824f79a49b00c5602fa5ccdc73de.jar" />
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_268d778a1fca824f79a49b00c5602fa5ccdc73de.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\carlos.perez\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.6.0\3f9b16b774f2c36cfd86dd2053d0b3059531dacc\okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-3.6.0_fb2507d2076092af621c69167b5badccdd28b63b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.0.1_284669130aa19d30116a4d49a58fe8fa864cbee0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-1.3.0_c43874a2b84f5af3b679ef49a7329d6305482218.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.soloader-soloader-0.1.0_43fc96b0957066ed770f570132a159724f79d7e0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="C:\code\src\github.com\ReactNative\BeSocial\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.3.0_5adefdfca943ed76ea158b2caf4f87933375a26d.jar" />
     </item>
 
 </items>

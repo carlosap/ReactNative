@@ -16,8 +16,8 @@ class Root extends React.Component {
   render() {
     const { onboarded } = this.props;
 
-    // if(!onboarded) return <ApplicationScreen.Login />
-    if(!onboarded) return <ApplicationScreen.Welcome onPress={this.goToApp} />
+    if(!onboarded) return <ApplicationScreen.Login />
+    //if(!onboarded) return <ApplicationScreen.Welcome onPress={this.goToApp} />
 
     return (
         <ApplicationScreen.MapAndEvents />

@@ -10,6 +10,7 @@ import EventScreen from './screens/EventScreen';
 import NotifyScreen from './screens/NotifyScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
 
+
 const tabBarConfig = {
   initialRouteName: 'Map',
   order: ['Map', 'Events','Notify','Setting'],
