@@ -7,7 +7,6 @@ import envelope from '../assets/envelope.png'
 import lock from '../assets/lock.png'
 import facebook from '../assets/facebook.png'
 import google from '../assets/google.png'
-import twitter from '../assets/twitter.png'
 import phoneIcon from '../assets/phone.png'
 import { InputItem } from 'antd-mobile-rn';
 import Link from '../components/Link';
@@ -31,8 +30,6 @@ class LoginScreen extends Component {
     this.setValidations();
     this.login = login.bind(this);
     this.handleSocialSignIn = handleSocialSignIn.bind(this);
-    this.signInWithTwitter = signInWithTwitter.bind(this);
-    this.signInWithGithub = signInWithGithub.bind(this);
     this.handleSocialSignInError = handleSocialSignInError.bind(this);
   }
 
@@ -162,7 +159,7 @@ class LoginScreen extends Component {
               }
               } />
 
-            <Link textStyle={[styles.forgotPassword]} text={"Forgot Password?"} link="Home" />
+            <Link textStyle={[styles.forgotPassword]} text={"Forgot Password?"} link="ForgotPassword" />
             <Text style={[styles.separatorOr]}></Text>
             <Button label="Sign In" style={styles.button} textStyle={styles.buttonText} />
           </View>
@@ -170,97 +167,31 @@ class LoginScreen extends Component {
         <View style={[styles.options]}>
           <View>
             <Text style={[styles.optionLabel]}>{"Become a member"}</Text>
-            {/* <Link
-              textStyle={[styles.textLink]}
-              text={"Sign Up"}
-              link="signUp" /> */}
+            <Link textStyle={[styles.textLink]} text={"Sign Up"} link="SignUp" />
           </View>
           <View style={[styles.separator]}>
           </View>
           <View>
             <Text style={[styles.optionLabel]}>{"Login with social apps"}</Text>
             <View style={[styles.social]}>
-              {/* <SocialSignIn
-                clientId={Environment.FACEBOOK.appId}
-                scopes={
-                  Environment.FACEBOOK.scope
-                }
-                type="facebook"
-                triggerElement={
-                  <Link>
-                    <Image
-                      resizeMode="contain"
-                      source={facebook}
-                      style={[styles.socialIcon]}
-                    />
-                  </Link>
-                }
-                onSuccess={(result) => {
-                  this.handleSocialSignIn("facebook", result)
-                }}
-                onError={(error) => {
-                  this.handleSocialSignInError("facebook", error)
-                }}
-              /> */}
-              {/* <SocialSignIn
-                clientId={Environment.GOOGLE.appId}
-                scopes={
-                  Environment.GOOGLE.scope
-                }
-                type="google"
-                triggerElement={
-                  <Link>
-                    <Image
-                      resizeMode="contain"
-                      source={google}
-                      style={[styles.socialIcon]}
-                    />
-                  </Link>
-                }
-                onSuccess={(result) => {
-                  this.handleSocialSignIn("google", result)
-                }}
-                onError={(error) => {
-                  this.handleSocialSignInError("google", error)
-                }}
-              /> */}
-              {/* <Link onPress={() => { this.setState({ twitterSignIn: true }) }}>
+              <Link>
                 <Image
                   resizeMode="contain"
-                  source={twitter}
+                  source={google}
                   style={[styles.socialIcon]}
                 />
-              </Link> */}
-              {/* <Link onPress={() => { this.setState({ githubSignIn: true }) }}>
-                <Icon name={'github-square'} style={[styles.githubIcon]} />
-              </Link> */}
+              </Link>
+              <Link>
+                <Image
+                  resizeMode="contain"
+                  source={facebook}
+                  style={[styles.socialIcon]}
+                />
+              </Link>
 
             </View>
           </View>
         </View>
-        {/* <Modal contentProps={{ onVerify: this.verifyOtp.bind(this) }} modalId="verification" visible={confirmOtp} onHide={() => { this.setState({ confirmOtp: false }) }} /> */}
-        {/* <CustomWebView
-          visible={renderRecaptcha}
-          scriptId="recaptcha"
-          onSuccess={this.parseRecaptcha.bind(this)}
-          onHide={() => { this.setState({ renderRecaptcha: false }) }}
-          onFailMessage={"Captcha has expired, Please try again"}
-          reloadOnFail={true}
-        />
-        <CustomWebView
-          visible={twitterSignIn}
-          scriptId="twitter"
-          onSuccess={this.signInWithTwitter.bind(this)}
-          onFailMessage={"Could not authenticate you with" + " twitter"}
-          onHide={() => { this.setState({ twitterSignIn: false }) }}
-        />
-        <CustomWebView
-          visible={githubSignIn}
-          scriptId="github"
-          onSuccess={this.signInWithGithub.bind(this)}
-          onFailMessage={"Could not authenticate you with" + " github"}
-          onHide={() => { this.setState({ githubSignIn: false }) }}
-        /> */}
       </View>
     );
   }
@@ -278,24 +209,8 @@ export function login(provider, credentials) {
     case 'local':
       promise = firebase.auth().signInWithEmailAndPassword(credentials.email, credentials.password)
       break;
-    case 'phone':
-      credential = firebase.auth.PhoneAuthProvider.credential(credentials.verificationId, credentials.code);
-      promise = firebase.auth().signInWithCredential(credential)
-      break;
-    case 'facebook':
-      credential = firebase.auth.FacebookAuthProvider.credential(credentials.token);
-      promise = firebase.auth().signInWithCredential(credential)
-      break;
     case 'google':
       credential = firebase.auth.GoogleAuthProvider.credential(credentials.idToken);
-      promise = firebase.auth().signInWithCredential(credential)
-      break;
-    case 'twitter':
-      credential = firebase.auth.TwitterAuthProvider.credential(credentials.token, credentials.secret);
-      promise = firebase.auth().signInWithCredential(credential)
-      break;
-    case 'github':
-      credential = firebase.auth.GithubAuthProvider.credential(credentials);
       promise = firebase.auth().signInWithCredential(credential)
       break;
   }
@@ -308,20 +223,8 @@ export function login(provider, credentials) {
         case 'local':
           Toast.fail("Invalid Username and Password", 0.5);
           break;
-        case 'phone':
-          Toast.fail("Invalid Otp", 0.5);
-          break;
-        case 'facebook':
-          Toast.fail("Could not authenticate you with" + " Facebook\n" + "Reason : " + e.message, 0.5);
-          break;
         case 'google':
           Toast.fail("Could not authenticate you with" + " Google\n" + "Reason : " + e.message, 0.5);
-          break;
-        case 'twitter':
-          Toast.fail("Could not authenticate you with" + " Twitter\n" + "Reason : " + e.message, 0.5);
-          break;
-        case 'github':
-          Toast.fail("Could not authenticate you with" + " Github\nReason:" + "+e.message", 0.5);
           break;
       }
 
@@ -334,22 +237,7 @@ export function handleSocialSignIn(provider, result) {
 }
 
 export function handleSocialSignInError(provider, error) {
-
   Toast.fail("Could not authenticate you with" + provider, 0.5);
-}
-
-export function signInWithTwitter(response) {
-  this.setState({
-    twitterSignIn: false
-  });
-  this.login("twitter", JSON.parse(response));
-}
-
-export function signInWithGithub(response) {
-  this.setState({
-    githubSignIn: false
-  });
-  this.login("github", response);
 }
 
 const styles = StyleSheet.create({
@@ -461,25 +349,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 10,
     color: '#fff'
-  },
-  countryCode: {
-    borderColor: Colors.primaryColor,
-    backgroundColor: Colors.inputBackgroundColor,
-    height: 50,
-    marginBottom: 10,
-    marginLeft: 0,
-    paddingLeft: 15,
-    borderBottomWidth: 0
-  },
-  countryCodeLabel: {
-    color: '#fff'
-  },
-  githubIcon: {
-    fontSize: 28,
-    color: '#fff',
-    marginTop: 6
   }
-
 });
 
 

@@ -1,3 +1,5 @@
+import {Toast} from 'antd-mobile-rn';
+
 export function getFirstError(errors){
     const keys = Object.keys(errors || {});
     if(keys.length>0){
@@ -8,7 +10,7 @@ export function getFirstError(errors){
 }
 
 export function showMessage(message) {
-    alert(message)
+    Toast.fail(message,0.5,null,false);
 }
 
 export function numberValidator(rule, value, callback){

@@ -4,6 +4,8 @@ import { createStackNavigator } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation';
 import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
+import SignUpScreen from './screens/SignUpScreen';
+import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 import MapScreen from './screens/MapScreen';
 import SettingScreen from './screens/SettingScreen';
 import EventScreen from './screens/EventScreen';
@@ -35,6 +37,8 @@ const tabBarConfig = {
 // StackNavigation pattern
 const LoginRoutes = createStackNavigator({
   Login: LoginScreen,
+  SignUp: SignUpScreen,
+  ForgotPassword: ForgotPasswordScreen,
   Home: HomeScreen,
 })
 

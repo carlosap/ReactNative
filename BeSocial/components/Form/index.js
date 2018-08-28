@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { Button, List, View, Text } from 'antd-mobile-rn';
 import { showMessage, getFirstError, numberValidator, integerValidator } from './validation';
+import { View, Text} from 'react-native'
+import { Button, List} from 'antd-mobile-rn';
+import Input from './input';
 import { createForm } from 'rc-form';
-import Input from './input'
 
-export default class Form extends Component {
+class Form extends React.Component {
+
   constructor(props) {
     super(props);
     this.elementRefs = [];
@@ -39,7 +41,6 @@ export default class Form extends Component {
     const { onSubmit, onError } = this.props;
     const { validateFields } = this.props.form;
     validateFields((errors, values) => {
-
       if (errors) {
         showMessage(getFirstError(errors));
         if (onError) {
@@ -62,7 +63,7 @@ export default class Form extends Component {
 
   render() {
     const { elements, style, submitTrigger, form } = this.props;
-    // const { getFieldDecorator } = form;
+    const { getFieldDecorator } = form;
     let submitBtn = this.props;
     if (typeof submitTrigger != 'undefined') {
       if (!submitTrigger) {
@@ -73,24 +74,14 @@ export default class Form extends Component {
           submitBtn = getTrigger(this.getExposedConfig())
         } else {
           submitBtn = (
-            <Button
-              {...buttonProps}
-              onClick={this.onSubmit.bind(this)}
-            >
+            <Button {...buttonProps} onClick={this.onSubmit.bind(this)} >
               <Text {...textProps}>{text || "Submit"}</Text>
             </Button>
           )
         }
       }
     } else {
-      submitBtn = (
-        <Button
-          type="default"
-          onClick={this.onSubmit.bind(this)}
-        >
-          Submit
-          </Button>
-      )
+      submitBtn = (<Button type="default" onClick={this.onSubmit.bind(this)}>Submit</Button>)
     }
     return (
       <List styles={style}>
@@ -100,13 +91,20 @@ export default class Form extends Component {
             return (
               <View key={index}>
                 {before}
-                <Input
-                  name={name}
-                  type={type}
-                  inputProps={inputProps}
-                />
-
-
+                {
+                  getFieldDecorator(name, {
+                    ...options,
+                    rules: this.modifyRules(options ? options.rules : null)
+                  } || {})(
+                    customElement ? customElement : (
+                      <Input
+                        name={name}
+                        type={type}
+                        inputProps={inputProps}
+                      />
+                    )
+                  )
+                }
                 {after}
               </View>
             )
@@ -114,7 +112,9 @@ export default class Form extends Component {
         }
         {submitBtn}
       </List>
-    );
+    )
   }
 }
-//export default createForm()(Form);
+
+export default createForm()(Form);
+

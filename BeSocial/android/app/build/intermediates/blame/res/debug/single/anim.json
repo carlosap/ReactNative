@@ -8,12 +8,12 @@
         "source": "C:\\code\\src\\github.com\\ReactNative\\BeSocial\\BeSocial\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.55.4\\res\\anim\\catalyst_fade_out.xml"
     },
     {
-        "merged": "C:\\code\\src\\github.com\\ReactNative\\BeSocial\\BeSocial\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\catalyst_fade_in.xml",
-        "source": "C:\\code\\src\\github.com\\ReactNative\\BeSocial\\BeSocial\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.55.4\\res\\anim\\catalyst_fade_in.xml"
-    },
-    {
         "merged": "C:\\code\\src\\github.com\\ReactNative\\BeSocial\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\catalyst_fade_in.xml",
         "source": "C:\\code\\src\\github.com\\ReactNative\\BeSocial\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.55.4\\res\\anim\\catalyst_fade_in.xml"
+    },
+    {
+        "merged": "C:\\code\\src\\github.com\\ReactNative\\BeSocial\\BeSocial\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\catalyst_fade_in.xml",
+        "source": "C:\\code\\src\\github.com\\ReactNative\\BeSocial\\BeSocial\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.55.4\\res\\anim\\catalyst_fade_in.xml"
     },
     {
         "merged": "C:\\code\\src\\github.com\\ReactNative\\BeSocial\\BeSocial\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",

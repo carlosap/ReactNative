@@ -84,7 +84,7 @@ class Input extends Component {
         input = (<InputItem type="bankCard" {...inputProps} />);
         break;
       default:
-        input = (<TextInput keyboardType={keyboardType || "default"} {...inputProps} />);
+        input = (<InputItem keyboardType={keyboardType || "default"} {...inputProps} />);
         break;
     }
 
