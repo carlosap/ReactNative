@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from 'react-navigation';
 import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
 import SignUpScreen from './screens/SignUpScreen';
+import SignUpExtScreen from './screens/SignUpExtScreen';
 import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 import MapScreen from './screens/MapScreen';
 import SettingScreen from './screens/SettingScreen';
@@ -38,6 +39,7 @@ const tabBarConfig = {
 const LoginRoutes = createStackNavigator({
   Login: LoginScreen,
   SignUp: SignUpScreen,
+  SignExtUp: SignUpExtScreen,
   ForgotPassword: ForgotPasswordScreen,
   Home: HomeScreen,
 })
