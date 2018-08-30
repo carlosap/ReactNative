@@ -1,11 +1,10 @@
 import { combineReducers } from 'redux';
 import {
-  ENABLE_ONBOARDED,
-  DISABLE_ONBOARDED,
+  UPDATE_SCREEN,
 } from '../actions/main';
 
 const initialState = {
-  onboarded: false
+  screen: 'Login'
 }
 
 const navigation = (state = initialState, action) => {
@@ -13,14 +12,10 @@ const navigation = (state = initialState, action) => {
   const {type, payload} = action;
 
   switch (type) {
-    case ENABLE_ONBOARDED:
-      retVal = { ...state };
-      retVal.onboarded = true;
-      break;
 
-    case DISABLE_ONBOARDED:
+    case UPDATE_SCREEN:
       retVal = { ...state };
-      retVal.onboarded = false;
+      retVal.screen = payload;
       break;
     
     default:

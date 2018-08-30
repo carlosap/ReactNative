@@ -2,23 +2,19 @@ import React from 'react';
 import { AsyncStorage } from 'react-native'
 import { connect } from 'react-redux';
 import { ApplicationScreen } from '../routes'
-import { enableOnboarded } from '../actions/main';
-
+import { updateScreen } from '../actions/main';
 import * as keys from '../constants/storageKeys';
-
 class Root extends React.Component {
 
   goToApp = () => {
     AsyncStorage.setItem(keys.ONBOARDED, 'true')
-    this.props.enableOnboarded()
+    this.props.updateScreen('Main');
   }
 
   render() {
-    const { onboarded } = this.props;
-
-    if(!onboarded) return <ApplicationScreen.Login />
-    //if(!onboarded) return <ApplicationScreen.Welcome onPress={this.goToApp} />
-
+    const { screen } = this.props;
+    if(screen === 'Login') return <ApplicationScreen.Login />
+    if(screen === 'Welcome') return <ApplicationScreen.Welcome onPress={this.goToApp} />
     return (
         <ApplicationScreen.MapAndEvents />
     );
@@ -27,13 +23,13 @@ class Root extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    onboarded: state.main.navigation.onboarded,
+    screen: state.main.navigation.screen,
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    enableOnboarded : (onboarded) => dispatch(enableOnboarded(onboarded)),
+    updateScreen : (screen) => dispatch(updateScreen(screen)),
   }
 }
 

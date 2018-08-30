@@ -3,14 +3,19 @@ import { connect } from 'react-redux';
 import { View, Text, Image, ScrollView, StyleSheet } from 'react-native'
 import { Toast } from 'antd-mobile-rn';
 import {ifIphoneX} from 'react-native-iphone-x-helper';
-import { Colors } from '../styles';
-import Spinner from '../components/Spinner';
-import Form from '../components/Form';
-import logo from '../assets/logo.png';
+import { Colors } from '../../styles';
+import Spinner from '../../components/Spinner';
+import Link from '../../components/Link';
+import Form from '../../components/Form';
+import envelope from '../../assets/envelope.png';
+import logo from '../../assets/logo.png';
+import lock from '../../assets/lock.png';
+import person from '../../assets/persongrey.png';
+import google from '../../assets/google.png';
+import facebook from '../../assets/facebook.png';
 import {login, handleSocialSignInError, handleSocialSignIn} from './LoginScreen';
-import { enableOnboarded } from '../actions/main';
 
-class SignUpExtScreen extends Component {
+class SignUpScreen extends Component {
   static navigationOptions = {
     header: null
   }
@@ -23,25 +28,34 @@ class SignUpExtScreen extends Component {
     this.handleSocialSignInError = handleSocialSignInError.bind(this);
   }
 
-  componentDidMount() {
-  }
   setValidations() {
     this.validations = {
-
-      "phone": {
+      "name": {
         rules: [
-          { min: 10, message: "Phone number should be of minimum 10 characters." },
-          { max: 15, message: "Phone number should be of maximum 15 characters." },
-        ]
+          { required: true, message: "Please enter your full name" },
+        ],
+        //initialValue : "Demo User"
+      },
+      "email": {
+        rules: [
+          { required: true, message: "Please enter email" },
+          { type: "email", message: "Please enter a valid email" }
+        ],
+      },
+      "password": {
+        rules: [
+          { required: true, message: "Please enter password" },
+          { min: 6, message: "Password should be of minimum 6 characters" }
+        ],
       }
     }
   }
 
 
   onSubmit(values) {
-    const { signUp, navigation } = this.props;
-    Spinner.start();
-    this.props.enableOnboarded();
+    const { navigation } = this.props;
+    //Spinner.start();
+    navigation.navigate('SignExtUp')
     const errorHandler = ((e) => {
       console.log(e);
       if (e.code == 'auth/email-already-in-use') {
@@ -53,52 +67,64 @@ class SignUpExtScreen extends Component {
   }
 
   render() {
-    const { phone } = this.validations;
+    const { name, email, password } = this.validations;
     const formElements = [
       {
-        type: "number",
-        name: "age",
-        inputProps: {
-          clear: true,
-          placeholder: "Enter Age",
-          labelNumber: 1.5,
-          style: [styles.input],
-          placeholderTextColor: "#fff",
-        }
-      },
-      {
         type: "text",
-        name: "city",
+        name: "name",
         inputProps: {
           clear: true,
-          placeholder: "Enter City",
+          placeholder: "Enter your full name",
           labelNumber: 1.5,
           style: [styles.input],
           placeholderTextColor: "#fff",
-        }
-      },
-      {
-        type: "text",
-        name: "hobbies",
-        inputProps: {
-          clear: true,
-          placeholder: "Enter Hobbies",
-          labelNumber: 1.5,
-          style: [styles.input],
-          placeholderTextColor: "#fff",
-        }
-      },
-      {
-        type: "phone",
-        name: "phone",
-        inputProps: {
-          clear: true,
-          placeholder: "Enter Phone",
-          labelNumber: 1.5,
-          style: [styles.input],
-          placeholderTextColor: "#fff",
+          children: (
+            <Image
+              resizeMode="contain"
+              source={person}
+              style={[styles.inputIcon]}
+            />
+          )
         },
-        options: phone
+        options: name
+      },
+      {
+        type: "email",
+        name: "email",
+        inputProps: {
+          clear: true,
+          placeholder: "Enter Email",
+          labelNumber: 1.5,
+          style: [styles.input],
+          placeholderTextColor: "#fff",
+          children: (
+            <Image
+              resizeMode="contain"
+              source={envelope}
+              style={[styles.inputIcon]}
+            />
+          )
+        },
+        options: email
+      },
+      {
+        type: "password",
+        name: "password",
+        inputProps: {
+          clear: true,
+          placeholder: "Enter Password",
+          labelNumber: 1.5,
+          style: [styles.input],
+          placeholderTextColor: "#fff",
+          children: (
+            <Image
+              resizeMode="contain"
+              source={lock}
+              style={[styles.inputIcon]}
+            />
+          )
+        },
+        options: password
       }
     ];
     return (
@@ -125,30 +151,47 @@ class SignUpExtScreen extends Component {
                 textProps: {
                   style: styles.buttonText
                 },
-                text: "Continue (or skip)"
+                text: "Sign Up"
               }}
             >
             </Form>
           </View>
         </ScrollView>
+        <View style={[styles.options]}>
+          <View>
+            <Text style={[styles.optionLabel]}>{"Become a member"}</Text>
+            <Link
+              textStyle={[styles.textLink]}
+              text={"Sign In"}
+              link="Login" />
+          </View>
+          <View style={[styles.separator]}>
+          </View>
+          <View>
+            <Text style={[styles.optionLabel]}>{"Login with social apps"}</Text>
+            <View style={[styles.social]}>
+              <Link>
+                <Image
+                  resizeMode="contain"
+                  source={google}
+                  style={[styles.socialIcon]}
+                />
+              </Link>
+              <Link>
+                <Image
+                  resizeMode="contain"
+                  source={facebook}
+                  style={[styles.socialIcon]}
+                />
+              </Link>
+            </View>
+          </View>
+        </View>
       </View>
     );
   }
 }
-
-function mapStateToProps(state) {
-  return {
-    onboarded: state.main.navigation.onboarded,
-  }
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    enableOnboarded: (onboarded) => dispatch(enableOnboarded(onboarded)),
-  }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(SignUpExtScreen)
-
+export default SignUpScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,

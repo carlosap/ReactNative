@@ -1,16 +1,8 @@
-export const ENABLE_ONBOARDED = 'ENABLE_ONBOARDED';
-export const DISABLE_ONBOARDED = 'DISABLE_ONBOARDED';
+export const UPDATE_SCREEN = 'UPDATE_SCREEN';
 
-export function enableOnboarded(onboarded) {
+export function updateScreen(screen) {
   return {
-    type: ENABLE_ONBOARDED,
-    payload: onboarded,
-  };
-}
-
-export function disableOnboarded(onboarded) {
-  return {
-    type: DISABLE_ONBOARDED,
-    payload: onboarded,
+    type: UPDATE_SCREEN,
+    payload: screen,
   }
 }

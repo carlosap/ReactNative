@@ -2,17 +2,21 @@ import React from 'react';
 import { Image } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation';
-import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
-import SignUpScreen from './screens/SignUpScreen';
-import SignUpExtScreen from './screens/SignUpExtScreen';
-import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 import MapScreen from './screens/MapScreen';
 import SettingScreen from './screens/SettingScreen';
 import EventScreen from './screens/EventScreen';
 import NotifyScreen from './screens/NotifyScreen';
-import WelcomeScreen from './screens/WelcomeScreen';
+import { YellowBox } from 'react-native';
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+//---Login Screens----
+import LoginScreen from './screens/Login/LoginScreen';
+import SignUpScreen from './screens/Login/SignUpScreen';
+import SignUpExtScreen from './screens/Login/SignUpExtScreen';
+import ForgotPasswordScreen from './screens/Login/ForgotPasswordScreen';
 
+//---Welcome Screen----
+import WelcomeScreen from './screens/Welcome/WelcomeScreen';
 
 const tabBarConfig = {
   initialRouteName: 'Map',

@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import { View,Text,Image, AsyncStorage, Dimensions } from 'react-native'
 import Swiper from 'react-native-swiper'
-import Logo from '../components/Logo'
-import Button from '../components/Button'
-
+import Logo from '../../components/Logo'
+import Button from './Button'
 const { width, height } = Dimensions.get('window')
 const splashes = [
-  require('../assets/welcome/6.jpg'),
-  require('../assets/welcome/7.jpg'),
-  require('../assets/welcome/8.jpg'),
+  require('../../assets/welcome/6.jpg'),
+  require('../../assets/welcome/7.jpg'),
+  require('../../assets/welcome/8.jpg'),
 ]
 
 class Welcome extends Component {

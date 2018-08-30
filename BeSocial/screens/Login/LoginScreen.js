@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Image, ScrollView, WebView, Text } from 'react-native'
-import { Colors } from '../styles'
+import { connect } from 'react-redux';
+import { View, StyleSheet, Image, ScrollView, Text } from 'react-native'
+import { Colors } from '../../styles'
 import { ifIphoneX } from 'react-native-iphone-x-helper';
-import logo from '../assets/logo.png'
-import envelope from '../assets/envelope.png'
-import lock from '../assets/lock.png'
-import facebook from '../assets/facebook.png'
-import google from '../assets/google.png'
-import phoneIcon from '../assets/phone.png'
-import { InputItem } from 'antd-mobile-rn';
-import Link from '../components/Link';
-import Button from '../components/Button';
+import logo from '../../assets/logo.png'
+import envelope from '../../assets/envelope.png'
+import lock from '../../assets/lock.png'
+import facebook from '../../assets/facebook.png'
+import google from '../../assets/google.png'
+import Link from '../../components/Link';
+import Form from '../../components/Form';
+import { updateScreen } from '../../actions/main';
 
 class LoginScreen extends Component {
 
@@ -21,23 +21,10 @@ class LoginScreen extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      phoneSignIn: false,
-      confirmOtp: false,
-      renderRecaptcha: false,
-    };
-
     this.setValidations();
     this.login = login.bind(this);
     this.handleSocialSignIn = handleSocialSignIn.bind(this);
     this.handleSocialSignInError = handleSocialSignInError.bind(this);
-  }
-
-  parseRecaptcha(recaptcha) {
-    this.setState({
-      recaptcha,
-      renderRecaptcha: false
-    }, this.sendSms.bind(this))
   }
 
   setValidations() {
@@ -59,59 +46,53 @@ class LoginScreen extends Component {
     }
   }
 
-  togglePhoneSignIn() {
-    this.setState({
-      phoneSignIn: !this.state.phoneSignIn
-    })
-  }
-
-  sendSms() {
-    const { recaptcha, phone } = this.state;
-    Spinner.start();
-    if (!recaptcha) {
-      Toast.fail("Captcha has expired, Please try again", 0.5)
-      return;
-    }
-
-    firebase.auth().signInWithPhoneNumber(phone, getRecaptchaApplicationVerifier(this.state.recaptcha)).then((result) => {
-      this.setState({
-        verificationId: result.verificationId,
-        confirmOtp: true
-      }, Spinner.stop);
-
-    }).catch((e) => {
-      console.log(e)
-      //Todo : Handle specific error codes for invalid phone number and invalid captcha
-    });
-  }
-
-  verifyOtp(otp) {
-
-    this.login("phone", {
-      code: otp,
-      verificationId: this.state.verificationId
-    });
-  }
-
   onSubmit(values) {
-    if (this.state.phoneSignIn) {
-      const phone = values.countryCode[0].concat(values.phone);
-      if (isValidNumber(phone)) {
-        this.setState({
-          renderRecaptcha: true,
-          phone
-        })
-      } else {
-        Toast.fail("Please enter a valid numeric phone number.", 0.5)
-      }
-    } else {
-      this.login('local', values);
-    }
+    this.props.updateScreen('Welcome');
   }
 
   render() {
     const { email, password } = this.validations;
-    const { phoneSignIn, githubSignIn, twitterSignIn, confirmOtp, renderRecaptcha } = this.state;
+    const formElements = [
+      {
+        type: "email",
+        name: "email",
+        inputProps: {
+          clear: true,
+          placeholder: "Enter Email",
+          labelNumber: 1.5,
+          style: [styles.input],
+          placeholderTextColor: "#fff",
+          children: (
+            <Image
+              resizeMode="contain"
+              source={envelope}
+              style={[styles.inputIcon]}
+            />
+          )
+        },
+        options: email
+      },
+      {
+        type: "password",
+        name: "password",
+        inputProps: {
+          clear: true,
+          placeholder: "Enter Password",
+          labelNumber: 1.5,
+          style: [styles.input],
+          placeholderTextColor: "#fff",
+          children: (
+            <Image
+              resizeMode="contain"
+              source={lock}
+              style={[styles.inputIcon]}
+            />
+          )
+        },
+        options: password
+      }
+    ];
+
     return (
       <View style={[styles.container]}>
         <ScrollView>
@@ -123,45 +104,25 @@ class LoginScreen extends Component {
             />
           </View>
           <View style={[styles.form]}>
-            <InputItem type="email" name="email" keyboardType={"email-address"}
-              {...{
-                options: email,
-                clear: true,
-                placeholder: "Enter Email",
-                labelNumber: 1.5,
-                style: [styles.input],
-                placeholderTextColor: "#fff",
-                children: (
-                  <Image
-                    resizeMode="contain"
-                    source={envelope}
-                    style={[styles.inputIcon]}
-                  />
-                )
-              }
-              } />
-
-            <InputItem type="password" name="password"
-              {...{
-                options: password,
-                clear: true,
-                placeholder: "Enter Password",
-                labelNumber: 1.5,
-                style: [styles.input],
-                placeholderTextColor: "#fff",
-                children: (
-                  <Image
-                    resizeMode="contain"
-                    source={lock}
-                    style={[styles.inputIcon]}
-                  />
-                )
-              }
-              } />
-
+          <Form
+              elements={formElements}
+              style={{
+                Body: styles.list
+              }}
+              onSubmit={this.onSubmit.bind(this)}
+              submitTrigger={{
+                buttonProps: {
+                  style: styles.button
+                },
+                textProps: {
+                  style: styles.buttonText
+                },
+                text: "Sign In"
+              }}
+            >
+            </Form>
             <Link textStyle={[styles.forgotPassword]} text={"Forgot Password?"} link="ForgotPassword" />
             <Text style={[styles.separatorOr]}></Text>
-            <Button label="Sign In" style={styles.button} textStyle={styles.buttonText} />
           </View>
         </ScrollView>
         <View style={[styles.options]}>
@@ -188,7 +149,6 @@ class LoginScreen extends Component {
                   style={[styles.socialIcon]}
                 />
               </Link>
-
             </View>
           </View>
         </View>
@@ -197,8 +157,13 @@ class LoginScreen extends Component {
   }
 }
 
+function mapDispatchToProps(dispatch) {
+  return {
+    updateScreen: (onboarded) => dispatch(updateScreen(onboarded)),
+  }
+}
 
-export default LoginScreen;
+export default connect(null, mapDispatchToProps)(LoginScreen)
 
 export function login(provider, credentials) {
   const { navigation, login } = this.props;
@@ -207,11 +172,10 @@ export function login(provider, credentials) {
   Spinner.start();
   switch (provider) {
     case 'local':
-      promise = firebase.auth().signInWithEmailAndPassword(credentials.email, credentials.password)
+
       break;
     case 'google':
-      credential = firebase.auth.GoogleAuthProvider.credential(credentials.idToken);
-      promise = firebase.auth().signInWithCredential(credential)
+
       break;
   }
   if (promise) {

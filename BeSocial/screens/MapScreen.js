@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View,Text,StyleSheet,Button } from 'react-native'
 import { connect } from 'react-redux';
-import { disableOnboarded } from '../actions/main';
+import { updateScreen } from '../actions/main';
 
 class MapScreen extends Component {
 
@@ -9,8 +9,8 @@ class MapScreen extends Component {
     
     return (
       <View style={styles.container}>
-        <Text>the value is ({this.props.onboarded ? "true" : "false"})</Text>
-        <Button title="Go To Login Screen" onPress={()=> this.props.disableOnboarded()} />
+        <Text>the value is ({this.props.screen})</Text>
+        <Button title="Go To Login Screen" onPress={()=> this.props.updateScreen('Login')} />
       </View>
     );
   }
@@ -18,13 +18,13 @@ class MapScreen extends Component {
 
 function mapStateToProps(state) {
   return {
-    onboarded: state.main.navigation.onboarded
+    screen: state.main.navigation.screen
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    disableOnboarded : (onboarded) => dispatch(disableOnboarded(onboarded)),
+    updateScreen: (screen) => dispatch(updateScreen(screen)),
   }
 }
 

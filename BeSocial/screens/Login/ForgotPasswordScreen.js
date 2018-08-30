@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { View, Text, Image, ScrollView, StyleSheet } from 'react-native'
-import Spinner from '../components/Spinner';
-import { Colors } from '../styles';
-import Link from '../components/Link';
-import Form from '../components/Form';
-import envelope from '../assets/envelope.png';
-import logo from '../assets/logo.png';
-import back from '../assets/back.png';
-import { enableOnboarded } from '../actions/main';
+import Spinner from '../../components/Spinner';
+import { Colors } from '../../styles';
+import Link from '../../components/Link';
+import Form from '../../components/Form';
+import envelope from '../../assets/envelope.png';
+import logo from '../../assets/logo.png';
+import back from '../../assets/back.png';
 
 class ForgotPasswordScreen extends Component {
   static navigationOptions = {
@@ -97,7 +95,6 @@ class ForgotPasswordScreen extends Component {
                 text: "Submit"
               }}
             >
-
             </Form>
           </View>
         </ScrollView>
@@ -125,18 +122,7 @@ class ForgotPasswordScreen extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    onboarded: state.main.navigation.onboarded,
-  }
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    enableOnboarded: (onboarded) => dispatch(enableOnboarded(onboarded)),
-  }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(ForgotPasswordScreen)
+export default ForgotPasswordScreen;
 
 const styles = StyleSheet.create({
   container: {
