@@ -62,7 +62,7 @@ class ForgotPasswordScreen extends Component {
     return (
       <View style={[styles.container]}>
         <ScrollView>
-          <Link link="login" style={[styles.back]}>
+          <Link link="Login" style={[styles.back]}>
             <Image
               resizeMode="contain"
               source={back}

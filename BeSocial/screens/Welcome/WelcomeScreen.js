@@ -6,7 +6,6 @@ import Button from './Button'
 const { width, height } = Dimensions.get('window')
 const splashes = [
   require('../../assets/welcome/6.jpg'),
-  require('../../assets/welcome/7.jpg'),
   require('../../assets/welcome/8.jpg'),
 ]
 
@@ -34,11 +33,6 @@ class Welcome extends Component {
         <View style={styles.slide}>
           <Image style={styles.image} source={splashes[1]} />
           <Text style={styles.text}>{`Be Social \nYou get to meet cool people.`}</Text>
-        </View>
-
-        <View style={styles.slide}>
-          <Image style={styles.image} source={splashes[2]} />
-          <Text style={styles.text}>{`I will find the love of my life\nBeSocial`}</Text>
           <Button onPress={this.props.onPress} label='Get started now' style={styles.buttonStyle} />
         </View>
       </Swiper>
