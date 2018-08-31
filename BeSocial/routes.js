@@ -45,7 +45,6 @@ const LoginRoutes = createStackNavigator({
   SignUp: SignUpScreen,
   SignExtUp: SignUpExtScreen,
   ForgotPassword: ForgotPasswordScreen,
-  Home: HomeScreen,
 })
 
 // NavigationTab pattern
