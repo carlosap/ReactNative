@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "188298581202",
+    "firebase_url": "https://eflyerjunkieapp.firebaseio.com",
+    "project_id": "eflyerjunkieapp",
+    "storage_bucket": "eflyerjunkieapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188298581202:android:5dc74eb8bdf6210b",
+        "android_client_info": {
+          "package_name": "com.spartanappsolutions.eflyerjunkie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "188298581202-eppjl8mp4i4nt7ascpksof1kne62sacd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.spartanappsolutions.eflyerjunkie",
+            "certificate_hash": "1307384b7ae7fd56fcdf783aec554b6c2510bdec"
+          }
+        },
+        {
+          "client_id": "188298581202-ip6cm5jr5n2il4oqqvhsovq7r7i7eiog.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZh6ZvbEtIzQxzG91DxCmb_snKiBy2_78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "188298581202-ip6cm5jr5n2il4oqqvhsovq7r7i7eiog.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "188298581202-btdc2vkn1f36g0rkvh0600vpaga128o4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.spartanappsolutions.eflyerjunkie"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

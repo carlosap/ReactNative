@@ -1,0 +1,89 @@
+{
+  "expo": {
+    "name": "EflyerJunkie",
+    "icon": "assets//icon.png",
+    "description": "A very interesting project.",
+    "splash": {
+      "image": "assets/image4.png",
+      "backgroundColor": "#000000"
+    },
+    "slug": "EflyerJunkie",
+    "privacy": "unlisted",
+    "sdkVersion": "35.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "1.2.35",
+    "orientation": "portrait",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "assets/welcome/**",
+      "assets/**"
+    ],
+    "notification": {
+      "icon": "assets//icon.png",
+      "color": "#000000"
+    },
+    "ios": {
+      "buildNumber": "1.2.35",
+      "bundleIdentifier": "com.spartanappsolutions.eflyerjunkie",
+      "supportsTablet": false,
+      "config": {
+        "googleMapsApiKey": "AIzaSyD0YrYfHYrKzVmFsnQ9TTtFeICIBz6Mrz8"
+      },
+      "infoPlist": {
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app uses location to suggest events near you",
+        "NSLocationAlwaysUsageDescription": "This app uses location to suggest events near you",
+        "NSLocationWhenInUseUsageDescription" : "This app uses location to suggest events near you",
+        "NSCameraUsageDescription": "This app access your photos to upload image for your event",
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ],
+        "NSAppTransportSecurity" : {
+          "NSAllowsArbitraryLoads" : true,
+          "NSAllowsArbitraryLoadsForMedia": true, 
+          "NSAllowsArbitraryLoadsInWebContent": true
+        }
+      }
+    },
+    "android": {
+      "package": "com.spartanappsolutions.eflyerjunkie",
+      "versionCode": 11,
+      "googleServicesFile": "./google-services.json",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyD0YrYfHYrKzVmFsnQ9TTtFeICIBz6Mrz8"
+        }
+      }
+    },
+    "extra": {
+      "firebaseConig": {
+        "apiKey": "AIzaSyA70C3kgRkbfxVFOYl1ASlMdmHt0H1cK_s",
+        "authDomain": "eflyerjunkieapp.firebaseapp.com",
+        "databaseURL": "https://eflyerjunkieapp.firebaseio.com",
+        "projectId": "eflyerjunkieapp",
+        "storageBucket": "eflyerjunkieapp.appspot.com",
+        "messagingSenderId": "188298581202",
+        "appId": "1:188298581202:web:e7de9ede51b73790"
+      },
+      "apiKey": "AIzaSyD0YrYfHYrKzVmFsnQ9TTtFeICIBz6Mrz8",
+      "stripe": {
+        "stripe_url": "https://api.stripe.com/v1/",
+        "secret_key": "pk_live_NZ6siLr6yh8e7VCpnletmp6C00j7U3SHoz"
+      },
+      "googleLogin": {
+        "androidClientId": "188298581202-eppjl8mp4i4nt7ascpksof1kne62sacd.apps.googleusercontent.com",
+        "iosClientId": "188298581202-4irvi8cs2smfq0lh3vhudbrov9g41lsn.apps.googleusercontent.com",
+        "androidStandaloneAppClientId": "188298581202-glg92pui9qg7nua8l0tpooqpaemacu2u.apps.googleusercontent.com",
+        "iosStandaloneAppClientId": "188298581202-btdc2vkn1f36g0rkvh0600vpaga128o4.apps.googleusercontent.com"
+      },
+      "facebookLogin": {
+        "key": "426638838197650"
+      }
+    }
+  }
+}

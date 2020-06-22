@@ -1,0 +1,8 @@
+-Store: holds up state (there is only one state)
+-Action: State can be modify by actions (simple objects)
+-Dispatcher: Action needs to be sent by comp. This is known as dispatching an action
+-Reducer: receives the action and modifies the state to give us a new state
+   -Pure Functions
+   -Only mandatory argument is the 'type'
+-Subscriber: Listens for state change to update the UI
+-- to fix babel issue with SDK 30 : yarn add --dev babel-jest babel-core@^7.0.0-bridge.0 @babel/core regenerator-runtime
